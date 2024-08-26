@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+
+<body>
+    <input id="text" type="text">
+    <button id="show">출력</button>
+    <div id="data"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // document.getElementById("show").addEventListener("click", () => {
+        //     const data = document.querySelector("#data");
+        //     const div2 = document.createElement("div");
+        //     const button = document.createElement("button");
+        //     button.textContent = "삭제";
+        //     const text = document.querySelector("#text");
+        //     const p = document.createElement("p");
+        //     const value = text.value;
+        //     p.textContent = value;
+        //     data.appendChild(div2);
+        //     div2.appendChild(p)
+        //     div2.appendChild(button);
+        //     button.addEventListener("click",() => {
+        //         document.getElementById("data").removeChild(div2);
+        //     });
+        //     text.value="";
+        // });
+        $(document).ready(function(){
+            $("#show").on("click",function(){
+                const data = $("#data");
+                const div2 = $("<div></div>");
+                const button = $("<button>삭제</button>");
+                const text = $("#text");
+                const p = $("<p></p>");
+                const value = text.val();
+                p.text(value);
+                data.append(div2);
+                div2.append(p)
+                div2.append(button);
+                button.on("click",function(){
+                    div2.remove();
+                });
+                
+                $("#text").val("");
+            });
+        })
+    </script>
+</body>
+
+</html>

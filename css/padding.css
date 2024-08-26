@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+article {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;;
+}
+article {
+    padding :30px;
+    width : 40px;
+    height: 40px;
+}
